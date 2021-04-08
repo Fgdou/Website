@@ -1,0 +1,98 @@
+*{
+	box-sizing: content-box;
+}
+a{
+	color: inherit;
+	font-size: inherit;
+	text-decoration: none;
+	font-weight: inherit;
+	font-family: inherit;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #031321;
+	color: white;
+	position: relative;
+	font-family: "Roboto";
+	font-size: 20px;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: table;
+}
+li{
+	padding: 10px 20px;
+	margin: 0;
+
+	display: inline-block;
+	font-weight: bold;
+	vertical-align: middle;
+}
+li a{
+	transition: transform .3s;
+	display: inline-block;
+}
+li a:hover{
+	transform: translateY(-5px);
+}
+.title-block{
+	text-decoration: underline;
+	text-underline-offset: 14px;
+}
+
+.logo{
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	margin: 10px;
+}
+
+.container{
+	position: absolute;
+	left: 50%;
+	top: 75vh;
+	grid-gap: 30px;
+	padding: 30px;
+	transform: translateX(-50%);
+	background-color: #010c15;
+	display: grid;
+  	grid-template-columns: 1fr 1fr;
+  	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+		"title        title"
+		"presentation presentation"
+		"projects     projects"
+		"languages     contacts";
+	border-radius: 20px 20px 0 0;
+}
+.presentation{
+	grid-area: presentation;
+}
+.projects{
+	grid-area: projects;
+}
+.projects li{
+	font-size: 30px;
+}
+.languages{
+	grid-area: languages;
+}
+.contacts{
+	grid-area: contacts;
+}
+.title{
+	grid-area: title;
+	position: relative;
+	text-align: center;
+}
+.title h1{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
